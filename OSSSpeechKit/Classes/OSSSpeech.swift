@@ -146,7 +146,7 @@ public enum OSSSpeechRecognitionTaskType: Int {
 }
 
 /// Delegate to handle events such as failed authentication for microphone among many more.
-public protocol OSSSpeechDelegate: class {
+public protocol OSSSpeechDelegate: AnyObject {
     /// When the microphone has finished accepting audio, this delegate will be called with the final best text output.
     func didFinishListening(withText text: String)
     /// Handle returning authentication status to user - primary use is for non-authorized state.
